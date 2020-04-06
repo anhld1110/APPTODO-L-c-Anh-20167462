@@ -68,5 +68,5 @@ class Addtask extends React.Component {
 export default Addtask;
 
 
-export default Addtask;
+
 
