@@ -22,10 +22,10 @@ class Addtask extends React.Component {
   }
 
   handleSubmit(event) {
-    
+
     this.props.handleClickParent(this.state);
     event.preventDefault();
-    
+
   }
 
   render() {
@@ -64,6 +64,9 @@ class Addtask extends React.Component {
     );
   }
 }
+
+export default Addtask;
+
 
 export default Addtask;
 
