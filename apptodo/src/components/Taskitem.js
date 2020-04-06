@@ -1,10 +1,10 @@
 import React from "react";
 
 class Taskitem extends React.Component {
-  
+
   onDelete = ()=>{
     this.props.onDelete(this.props.index);
-    
+
   }
   render() {
   var task = this.props.task;
@@ -27,5 +27,4 @@ class Taskitem extends React.Component {
 }
 
 export default Taskitem;
-
 
