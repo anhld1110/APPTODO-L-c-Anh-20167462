@@ -3,7 +3,7 @@ import Taskitem from "./Taskitem";
 class Tasklist extends React.Component {
   onDelete = ()=>{
     this.props.onDelete(this.props.index);
-    
+
   }
   render() {
     var Task = this.props.Task;
