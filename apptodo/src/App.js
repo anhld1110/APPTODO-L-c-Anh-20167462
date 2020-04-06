@@ -1,9 +1,13 @@
+import React, { Component } from 'react';
+import ToDoListItem from "./ToDoListItem.js"
+import './App.css';
 import React from "react";
 import Addtask from "./components/Addtask";
 import Tasklist from "./components/Tasklist";
 import TodoTitle from "./components/TodoTile"
 import "./App.css";
 
+class App extends Component {
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -31,10 +35,10 @@ class App extends React.Component {
         }
       ]
     };
-    
+
   }
   createGuid() {
-  
+
     function s4() {
        return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
     }
@@ -47,8 +51,8 @@ class App extends React.Component {
     this.setState({
       Task : Task
     })
-    
-   
+
+
 }
 onDelete =(index) =>{
   var Task = this.state.Task;
@@ -61,6 +65,10 @@ onDelete =(index) =>{
   render() {
     var Task = this.state.Task;
     return (
+      <div className="App">
+        <div>
+          <ToDoListItem
+          />
       <div className="container">
         <TodoTitle></TodoTitle>
         <br />
@@ -75,7 +83,7 @@ onDelete =(index) =>{
               onDelete = {this.onDelete}
               ></Tasklist>
             </div>
-            
+
           </div>
         </div>
       </div>
@@ -83,4 +91,5 @@ onDelete =(index) =>{
   }
 }
 
+export default App; 
 export default App;
